@@ -1,0 +1,225 @@
+/* BuildTech — Comprehensive Design Tokens & Variables */
+
+:root {
+  /* Brand & Accent Colors (Light Theme) */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-active: #1e40af;
+  --color-primary-light: #eff6ff;
+  --color-primary-subtle: #dbeafe;
+  --color-primary-contrast: #ffffff;
+  --color-primary-focus: rgba(37, 99, 235, 0.35);
+
+  --color-secondary: #475569;
+  --color-secondary-hover: #334155;
+  --color-secondary-subtle: #f1f5f9;
+
+  /* Neutrals & Surfaces (Light Theme) */
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-card: #ffffff;
+  --color-surface-muted: #f1f5f9;
+  --color-surface-hover: #e2e8f0;
+  --color-surface-raised: #ffffff;
+
+  /* Typography Colors (Light Theme) */
+  --color-text: #0f172a;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #ffffff;
+  --color-bg-secondary: #f1f5f9;
+
+  /* Borders & Dividers (Light Theme) */
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+  --color-border-hover: #cbd5e1;
+  --color-border-focus: #2563eb;
+
+  /* Semantic Status Colors (Light Theme) */
+  --color-success: #16a34a;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #bbf7d0;
+  --color-success-text: #15803d;
+
+  --color-danger: #dc2626;
+  --color-danger-bg: #fef2f2;
+  --color-danger-border: #fecaca;
+  --color-danger-text: #b91c1c;
+
+  --color-warning: #d97706;
+  --color-warning-bg: #fffbeb;
+  --color-warning-border: #fde68a;
+  --color-warning-text: #b45309;
+
+  --color-info: #0284c7;
+  --color-info-bg: #f0f9ff;
+  --color-info-border: #bae6fd;
+  --color-info-text: #0369a1;
+
+  /* Role Badges (Light Theme) */
+  --color-role-admin-text: #7e22ce;
+  --color-role-admin-bg: #f3e8ff;
+  --color-role-admin-border: #e9d5ff;
+
+  --color-role-customer-text: #1d4ed8;
+  --color-role-customer-bg: #dbeafe;
+  --color-role-customer-border: #bfdbfe;
+
+  /* Typography Scale */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --font-size-xs: 0.75rem;
+  /* 12px */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-lg: 1.125rem;
+  /* 18px */
+  --font-size-xl: 1.25rem;
+  /* 20px */
+  --font-size-2xl: 1.5rem;
+  /* 24px */
+  --font-size-3xl: 1.875rem;
+  /* 30px */
+  --font-size-4xl: 2.25rem;
+  /* 36px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Spacing Scale */
+  --space-0-5: 0.125rem;
+  /* 2px */
+  --space-1: 0.25rem;
+  /* 4px */
+  --space-2: 0.5rem;
+  /* 8px */
+  --space-3: 0.75rem;
+  /* 12px */
+  --space-4: 1rem;
+  /* 16px */
+  --space-5: 1.25rem;
+  /* 20px */
+  --space-6: 1.5rem;
+  /* 24px */
+  --space-8: 2rem;
+  /* 32px */
+  --space-10: 2.5rem;
+  /* 40px */
+  --space-12: 3rem;
+  /* 48px */
+  --space-16: 4rem;
+  /* 64px */
+  --space-20: 5rem;
+  /* 80px */
+
+  /* Border Radii - Standardized & Minimalist */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* Subtle, Restrained Elevation (Light Theme) */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
+
+  /* Layout */
+  --container-max-width: 1280px;
+  --navbar-height: 68px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   Dark Theme Design Tokens
+   ========================================================================== */
+[data-theme="dark"] {
+  /* Brand & Accent Colors (Dark Theme) */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #60a5fa;
+  --color-primary-active: #2563eb;
+  --color-primary-light: rgba(59, 130, 246, 0.12);
+  --color-primary-subtle: rgba(59, 130, 246, 0.2);
+  --color-primary-contrast: #ffffff;
+  --color-primary-focus: rgba(59, 130, 246, 0.45);
+
+  --color-secondary: #94a3b8;
+  --color-secondary-hover: #cbd5e1;
+  --color-secondary-subtle: #1e293b;
+
+  /* Neutrals & Surfaces (Dark Theme) */
+  --color-background: #090d16;
+  --color-surface: #010713;
+  --color-surface-card: #0a111d;
+  --color-surface-muted: #1e293b;
+  --color-surface-hover: #243247;
+  --color-surface-raised: #1e293b;
+
+  /* Typography Colors (Dark Theme) */
+  --color-text: #f9fafb;
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #9ca3af;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #090d16;
+  --color-bg-secondary: #1e293b;
+
+  /* Borders & Dividers (Dark Theme) */
+  --color-border: #1f293d;
+  --color-border-subtle: #162032;
+  --color-border-hover: #334155;
+  --color-border-focus: #3b82f6;
+
+  /* Semantic Status Colors (Dark Theme) */
+  --color-success: #22c55e;
+  --color-success-bg: rgba(34, 197, 94, 0.14);
+  --color-success-border: rgba(34, 197, 94, 0.28);
+  --color-success-text: #4ade80;
+
+  --color-danger: #ef4444;
+  --color-danger-bg: rgba(239, 68, 68, 0.14);
+  --color-danger-border: rgba(239, 68, 68, 0.28);
+  --color-danger-text: #f87171;
+
+  --color-warning: #f59e0b;
+  --color-warning-bg: rgba(245, 158, 11, 0.14);
+  --color-warning-border: rgba(245, 158, 11, 0.28);
+  --color-warning-text: #fbbf24;
+
+  --color-info: #38bdf8;
+  --color-info-bg: rgba(56, 189, 248, 0.14);
+  --color-info-border: rgba(56, 189, 248, 0.28);
+  --color-info-text: #7dd3fc;
+
+  /* Role Badges (Dark Theme) */
+  --color-role-admin-text: #d8b4fe;
+  --color-role-admin-bg: rgba(168, 85, 247, 0.18);
+  --color-role-admin-border: rgba(168, 85, 247, 0.35);
+
+  --color-role-customer-text: #93c5fd;
+  --color-role-customer-bg: rgba(59, 130, 246, 0.18);
+  --color-role-customer-border: rgba(59, 130, 246, 0.35);
+
+  /* Subtle, Restrained Elevation (Dark Theme) */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}

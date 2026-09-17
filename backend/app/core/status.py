@@ -1,0 +1,53 @@
+"""
+HTTP Status Codes compatibility module.
+Provides standard HTTP status code constants backed by http.HTTPStatus.
+"""
+from http import HTTPStatus
+
+
+class StatusCodeRegistry:
+    HTTP_100_CONTINUE = 100
+    HTTP_101_SWITCHING_PROTOCOLS = 101
+    HTTP_200_OK = 200
+    HTTP_201_CREATED = 201
+    HTTP_202_ACCEPTED = 202
+    HTTP_203_NON_AUTHORITATIVE_INFORMATION = 203
+    HTTP_204_NO_CONTENT = 204
+    HTTP_205_RESET_CONTENT = 205
+    HTTP_206_PARTIAL_CONTENT = 206
+    HTTP_300_MULTIPLE_CHOICES = 300
+    HTTP_301_MOVED_PERMANENTLY = 301
+    HTTP_302_FOUND = 302
+    HTTP_303_SEE_OTHER = 303
+    HTTP_304_NOT_MODIFIED = 304
+    HTTP_307_TEMPORARY_REDIRECT = 307
+    HTTP_308_PERMANENT_REDIRECT = 308
+    HTTP_400_BAD_REQUEST = 400
+    HTTP_401_UNAUTHORIZED = 401
+    HTTP_402_PAYMENT_REQUIRED = 402
+    HTTP_403_FORBIDDEN = 403
+    HTTP_404_NOT_FOUND = 404
+    HTTP_405_METHOD_NOT_ALLOWED = 405
+    HTTP_406_NOT_ACCEPTABLE = 406
+    HTTP_408_REQUEST_TIMEOUT = 408
+    HTTP_409_CONFLICT = 409
+    HTTP_410_GONE = 410
+    HTTP_415_UNSUPPORTED_MEDIA_TYPE = 415
+    HTTP_422_UNPROCESSABLE_ENTITY = 422
+    HTTP_422_UNPROCESSABLE_CONTENT = 422
+    HTTP_429_TOO_MANY_REQUESTS = 429
+    HTTP_500_INTERNAL_SERVER_ERROR = 500
+    HTTP_501_NOT_IMPLEMENTED = 501
+    HTTP_502_BAD_GATEWAY = 502
+    HTTP_503_SERVICE_UNAVAILABLE = 503
+    HTTP_504_GATEWAY_TIMEOUT = 504
+
+    def __getattr__(self, name: str) -> int:
+        clean_name = name.replace("HTTP_", "")
+        try:
+            return getattr(HTTPStatus, clean_name).value
+        except AttributeError:
+            raise AttributeError(f"Unknown HTTP status code: {name}")
+
+
+status = StatusCodeRegistry()
